@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.App{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 12vh 88vh;
+    grid-template-areas: "header header"
+                         "aside main";
+}
+
+header{
+    background-color: rgb(14, 109, 61);
+    grid-area: header;
+}
+
+
+.side-left{
+    background-color: rgb(24, 184, 104);
+    grid-area:aside;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 10vh 10vh 10vh 40vh 8vh;
+    grid-template-areas: "new new"
+                         "txt nmb"
+                         "sv  sv"
+                         ".    ." 
+                         "alter alter";
+    color:white;
+    padding:5px 20px;
+    grid-row-gap: 10px;
+}
+
+main{
+    grid-area:main;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    overflow: auto;/*a propriedade overflow auto, significa dizer que se por acaso o conteudo da div ultrapassar a largura ou altura definida, ela vai gerar uma barra de rolagem.*/
+}
+
+img{
+    height: 45px;
+    width: 45px;
+    margin: 20px;
+}
+
+.gelinho-Item{
+    margin: 50px 30px;
+    padding: 5px 20px;
+    height: 200px;
+    background-color: rgb(30, 251, 166);
+    grid-column: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "sabor sabor sabor"
+                         "img img img"
+                         "qtde inpt trash";
+    border-radius: 10px;
+    max-width: 350px;
+}
+
+.gelinho-Item h3{
+    grid-area:sabor;
+    justify-self: center;
+    color: rgb(16, 63, 53);
+}
+
+.gelinho-Item h5{
+    grid-area: qtde;
+    font-size: large;
+    align-content: center;
+    align-self: center;
+    justify-self: center;
+    color: rgb(3, 114, 81);
+}
+
+.gelinho-Item .inpt{
+    grid-area: inpt !important;
+    font-size: large;
+    align-self: center;
+    padding-left: 4vh;
+    color: rgb(0, 0, 0);
+}
+
+.gelinho-Item p, #delete{
+    grid-area: trash;
+    font-size: 30px;
+    align-self: center;
+    justify-self: center;
+    color:rgb(246, 93, 73);
+    cursor: pointer;
+}
+.side-left Input{
+    color: white;
+}
+
+.side-left Button{
+    color: honeydew;
+}
+
+.side-left .salvar{
+    grid-area: sv;
+    background-color: rgb(11, 44, 29);
+}
+.side-left .salvarAlter{
+    grid-area: alter;
+}
+
+.side-left h1{
+    grid-area: new;
+}
