@@ -1,4 +1,4 @@
-![Alt text](blob/master/2020-01-22_16-55.png?raw=true "Title")
+![Alt text](master/2020-01-22_16-55.png?raw=true "Title")
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
